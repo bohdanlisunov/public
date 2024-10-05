@@ -74,3 +74,91 @@ footer {
 footer p {
     margin: 0;
 }
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ефект появи */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Навігація: ефект при наведенні */
+nav ul li a:hover {
+    color: #00bcd4;
+    transition: color 0.3s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00bcd4;
+}
+
+/* Базовий стиль для мобільних пристроїв */
+body {
+    font-size: 16px;
+}
+
+/* Десктоп версія */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    section {
+        padding: 40px;
+    }
+
+    .project {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .project h3, .project p {
+        margin: 0;
+    }
+}
